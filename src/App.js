@@ -1,9 +1,13 @@
 import React from 'react';
 
+import {Simpsons} from "./components/Simpsons";
+import {Characters} from "./components/Characters";
+
 const App = () => {
     return (
-        <div>
-          
+        <div >
+            <Simpsons/>
+            <Characters/>
         </div>
     );
 };
