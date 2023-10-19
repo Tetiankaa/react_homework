@@ -1,0 +1,19 @@
+.Post{
+    background-color: rgb(128, 128, 128);
+    border-radius: 10px;
+    border: 2px solid black;
+    width: calc(10% - 24px );
+   text-align: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+     align-items: center;
+}
+.Button{
+    border-radius: 5px;
+    width: 60px;
+    background-color: #48bbbb;
+
+}

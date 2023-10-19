@@ -1,0 +1,7 @@
+.PostDetail{
+    width: 50%;
+    border: 5px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+}

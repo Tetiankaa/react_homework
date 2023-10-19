@@ -1,13 +1,16 @@
 import React from 'react';
 
+import css from './PostDetails.module.css';
+
 const PostDetails = ({postDetail}) => {
-    const {id, title, body}= postDetail;
+    const {userId, id, title, body} = postDetail;
 
     return (
-        <div>
+        <div className={css.PostDetail}>
+            <p>userId: {userId}</p>
             <p>ID:{id}</p>
-            <h3>{title}</h3>
-            <p>{body}</p>
+            <p>TITLE: {title}</p>
+            <p>BODY: {body}</p>
         </div>
     );
 };
