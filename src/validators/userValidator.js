@@ -10,6 +10,5 @@ const userValidator = Joi.object({
         'string.pattern.base':'Invalid phone number format.'
     })
 })
-//.pattern(/^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/)
-//.pattern(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
+
 export {userValidator}

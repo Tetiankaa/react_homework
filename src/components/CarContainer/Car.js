@@ -1,7 +1,14 @@
 import React from 'react';
+import {carService} from "../../services/carService";
 
-const Car = ({car, setUpdateCar, deleteCar}) => {
+const Car = ({car, setUpdateCar, setTrigger}) => {
     const {id, brand, price, year} = car;
+
+  const deleteCar = async (carId) =>{
+      await carService.deleteById(carId);
+      setTrigger(prev=> !prev);
+  }
+
 
     return (
         <div>

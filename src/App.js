@@ -6,9 +6,9 @@ import {CommentContainer} from "./components/CommentContainer/CommentContainer";
 const App = () => {
     return (
         <div>
-          {/*<CarContainer/>*/}
+          <CarContainer/>
           {/*  <UserContainer/>*/}
-            <CommentContainer/>
+          {/*  <CommentContainer/>*/}
         </div>
     );
 };
