@@ -11,7 +11,7 @@ const PostContainer = ({postId}) => {
     }, [postId]);
     return (
         <div>
-            {post && <Post key={post.id} post={post}/>}
+            {post && <Post post={post}/>}
         </div>
     );
 };
