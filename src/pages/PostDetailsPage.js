@@ -1,15 +1,16 @@
 import React from 'react';
-import {PostDetails} from "../components/PostDetailsContainer/PostDetails";
-import {useLoaderData} from "react-router-dom";
+import {PostDetailsContainer} from "../components/PostDetailsContainer/PostDetailsContainer";
+import {useParams} from "react-router-dom";
 import {Comments} from "../components/CommentsContainer/Comments";
 
 const PostDetailsPage = () => {
-    const {comments:{data:comments}, post:{data:post}}= useLoaderData();
+
+    const {postId} = useParams();
 
     return (
         <div>
-            <PostDetails post={post}/>
-            <Comments comments={comments}/>
+            <PostDetailsContainer postId={postId}/>
+            <Comments postId={postId}/>
         </div>
     );
 };

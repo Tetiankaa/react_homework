@@ -7,7 +7,7 @@ import {UserDetailsPage} from "./pages/UserDetailsPage";
 import {PostsTitlesPage} from "./pages/PostsTitlesPage";
 import {PostDetailsPage} from "./pages/PostDetailsPage";
 import {postService} from "./services/postService";
-import {commentService} from "./services/commentService";
+
 
 const router = createBrowserRouter([
     {path:'', element:<MainLayout/>, children:[
@@ -16,12 +16,7 @@ const router = createBrowserRouter([
             {path:'users/:userId', element:<UserDetailsPage/>, loader:({params:{userId}})=>userService.getUserById(userId),children:[
                     {path:'posts',element:<PostsTitlesPage/>, loader:({params:{userId}})=>postService.getPostsByUserId(userId)}
                 ]},
-            {path:'users/:userId/posts/:postId', element:<PostDetailsPage/>,
-                loader:async ({params:{postId}})=>{
-                 const post = await postService.getPostById(postId);
-                 const comments = await commentService.getCommentsByPostId(postId);
-                 return {post,comments}
-                }}
+            {path:'posts/:postId', element:<PostDetailsPage/>}
         ]}
 ])
 
