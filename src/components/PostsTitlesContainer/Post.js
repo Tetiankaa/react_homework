@@ -9,7 +9,7 @@ const Post = ({post}) => {
     return (
         <div>
             <div>{title}</div>
-            <button onClick={()=>navigate(`/posts/${id}`, {replace:true})}>More info</button>
+            <button onClick={()=>navigate(`/posts/${id}`)}>More info</button>
         </div>
     );
 };

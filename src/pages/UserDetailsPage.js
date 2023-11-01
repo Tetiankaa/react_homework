@@ -2,7 +2,8 @@ import React from 'react';
 import {Outlet, useLoaderData} from "react-router-dom";
 import {UserDetails} from "../components/UserDetailsContainer/UserDetails";
 
-const UserDetailsPage = () => {
+const
+    UserDetailsPage = () => {
     const {data} = useLoaderData();
     return (
         <div>
