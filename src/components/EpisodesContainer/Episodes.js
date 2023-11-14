@@ -11,6 +11,7 @@ const Episodes = () => {
 
     useEffect(() => {
         episodeServices.getAll(query.get('page')).then(({data})=>{
+            console.log(data);
             setEpisodes(data.results);
             setPrevNext({prev: data.info.prev, next: data.info.next});
         })
